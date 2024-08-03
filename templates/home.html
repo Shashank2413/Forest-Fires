@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FWI Prediction</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="login max-w-md mx-auto p-4 bg-gray-100 shadow-md rounded">
+    <h1 class="text-3xl font-bold mb-4">FWI Prediction</h1>
+    <form action="{{ url_for('predictdata')}}" method="post">
+      <h2 class="text-2xl font-bold mb-4">Enter Values</h2>
+      <label class="block mb-2" for="Temperature">Temperature</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="Temperature" name="Temperature"><br><br>
+      <label class="block mb-2" for="RH">RH</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="RH" name="RH"><br><br>
+      <label class="block mb-2" for="Ws">Ws</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="Ws" name="Ws"><br><br>
+      <label class="block mb-2" for="Rain">Rain</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="Rain" name="Rain"><br><br>
+      <label class="block mb-2" for="FFMC">FFMC</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="FFMC" name="FFMC"><br><br>
+      <label class="block mb-2" for="DMC">DMC</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="DMC" name="DMC"><br><br>
+      <label class="block mb-2" for="ISI">ISI</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="ISI" name="ISI"><br><br>
+      <label class="block mb-2" for="Classes">Classes</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="Classes" name="Classes"><br><br>
+      <label class="block mb-2" for="Region">Region</label>
+      <input class="w-full p-2 pl-10 text-sm text-gray-700" type="text" id="Region" name="Region"><br><br>
+      <button class="bg-blue-700 text-black font-bold py-2 px-4 rounded" type="submit">Predict</button>
+    </form>
+    <h2 class="text-lg font-bold mb-4">The FWI Prediction Is {{results}}</h2>
+  </div>
+</body>
+</html>
